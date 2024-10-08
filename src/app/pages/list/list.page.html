@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <!--  Creamos el NgFor que recorre el Array que creamos en base a la Interfaz MenuItems -->
+    <ion-item *ngFor="let item of menuItems" [routerLink]="item.href">
+      <ion-icon [name]="item.icon" slot="start"></ion-icon>
+      <ion-label>{{ item.text }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
